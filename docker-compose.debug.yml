@@ -1,0 +1,13 @@
+# Extends docker-compose.yml for local development and Swagger access.
+# Usage: docker compose -f docker-compose.yml -f docker-compose.debug.yml up --build
+#
+# Changes from base:
+#   - Backend port 8080 is published so Swagger is reachable at http://localhost:8080/swagger
+#   - ASPNETCORE_ENVIRONMENT set to Development to enable Swagger and detailed errors
+
+services:
+  backend:
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    ports:
+      - "8080:8080"

@@ -1,0 +1,17 @@
+**/bin/
+**/obj/
+**/out/
+**/.vs/
+**/.vscode/
+**/node_modules/
+**/dist/
+**/.git/
+**/.gitignore
+**/README.md
+**/Steps.md
+**/BUILD.md
+**/Requirements.md
+**/ROADMAP.md
+*.sln
+*.user
+*.tmp

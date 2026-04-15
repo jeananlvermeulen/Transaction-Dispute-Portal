@@ -1,0 +1,10 @@
+# Local environment — never commit real secrets
+.env
+
+# IDE and tool directories
+.vs/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
