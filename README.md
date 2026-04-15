@@ -481,15 +481,10 @@ Access at: `http://localhost:3000`
 5. Set a password (minimum 8 characters, must include at least one uppercase letter, one digit, and one special character).
 6. Submit — you will be redirected to the login page.
 
-#### Login & MFA
+#### Login
 
 1. Enter your email and password.
-2. **First login only:** you will be prompted to set up Multi-Factor Authentication:
-   - Scan the QR code with a TOTP app (Google Authenticator, Microsoft Authenticator, Authy, or any RFC 6238-compliant app).
-   - Enter the 6-digit code from the app to confirm setup.
-3. On all subsequent logins, enter your password followed by the current 6-digit code from your authenticator app.
-
-> MFA can be enabled or disabled from the **Profile** page at any time.
+2. You will be taken directly to the dashboard.
 
 #### Dashboard
 
@@ -537,7 +532,6 @@ Navigate to **Profile** via the icon in the top-right of the navigation bar.
 
 - Update your name or phone number — a verification code is sent to your email to confirm the change before it is applied.
 - Change your password — your current password is verified first, then a confirmation code is emailed.
-- Enable or disable MFA.
 
 #### Forgot Password
 
@@ -675,7 +669,7 @@ Protected endpoints show a closed padlock icon. Click **Try it out** → fill in
 |---|---|
 | Password hashing | PBKDF2 with SHA-256, 10,000 iterations (ASP.NET Core Identity default) |
 | JWT authentication | HS256-signed tokens, 1-hour expiry, zero clock skew tolerance |
-| MFA | TOTP (RFC 6238) via ASP.NET Core Identity — compatible with any authenticator app |
+| MFA (planned) | TOTP (RFC 6238) backend infrastructure built via ASP.NET Core Identity — UI wiring is a planned enhancement |
 | HttpOnly cookies | JWTs stored in HttpOnly cookies by the BFF — not accessible to JavaScript |
 | CSRF protection | Double-submit cookie pattern — `csrf_token` cookie echoed back as `X-CSRF-Token` header |
 | CORS | Backend locked to BFF origin only — all other origins are rejected |
@@ -790,7 +784,7 @@ Returns `200 OK` when healthy, `503 Service Unavailable` when the database is un
 
 | Enhancement | Description |
 |---|---|
-| Employee MFA | Extend TOTP-based Multi-Factor Authentication to the employee portal. Customers currently require MFA on every login; employees currently authenticate via email verification only. Adding TOTP to the employee flow would align with the original requirement for MFA across both portals. |
+| Multi-Factor Authentication | The backend TOTP infrastructure (secret generation, QR code provisioning, code verification via ASP.NET Core Identity) and the MFA setup UI page are fully built. The remaining work is wiring the setup page into the router and linking it from the customer Profile page, then extending the same flow to the employee portal. |
 | File attachments | Allow customers to upload supporting evidence (e.g. receipts, screenshots) when submitting a dispute, stored in AWS S3. |
 | Real-time notifications | WebSocket or Server-Sent Events integration to push live dispute status updates to the customer without requiring a page refresh. |
 | Reporting & analytics | An admin dashboard showing dispute volumes, average resolution times, and status breakdowns — exportable as PDF or CSV. |
