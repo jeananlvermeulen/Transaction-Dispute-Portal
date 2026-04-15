@@ -474,7 +474,7 @@ Access at: `http://localhost:3000`
 
 #### Registration
 
-1. Click **Register here** on the login page.
+1. Click **Sign up** on the login page.
 2. Please ensure that you use a real email address on step below as emails will be sent to this address for verification codes as well as dispute updates.
 3. Enter your first name, last name, email address, and phone number, then click **Send Verification Code**.
 4. A 6-digit code will be emailed to you. Enter it on the verification screen.
@@ -492,15 +492,15 @@ After login you will see:
 - Your name, email address, and account number.
 - **Dispute summary stats** — live counts of open, resolved, rejected, and cancelled disputes.
 - **Recent transactions** — the last 5 transactions on your account.
-- **Open disputes** — your currently active disputes with their reference number, reason, and status.
+- **Open disputes** — your 3 most recent active disputes with their reference number, reason, and status.
 
 #### Viewing Transactions
 
 Navigate to **Transactions** in the top navigation bar. Transactions are paginated.
 
-To generate test transactions, click **Simulate Transactions** — this creates 20 sample transactions on your account so you can explore the dispute flow without needing real data.
+To generate test transactions, click **Simulate Transactions** — this creates 21 sample transactions on your account so you can explore the dispute flow without needing real data.
 
-To raise a dispute on a transaction, click the **⋮** (three-dot) menu on any row and select **Dispute this transaction**.
+To raise a dispute on a transaction, click the **Dispute** button on any transaction row.
 
 #### Raising a Dispute
 
@@ -584,7 +584,7 @@ The dashboard shows all customer disputes across the system, split into:
 
 #### Updating a Dispute Status
 
-1. Click **⋮ → Update Status** on any dispute row.
+1. Click **Update Status** on any dispute row.
 2. Select the new status:
    - **Pending** — acknowledged, queued for investigation.
    - **Under Review** — actively being investigated.
@@ -593,14 +593,6 @@ The dashboard shows all customer disputes across the system, split into:
 3. Optionally add **notes** to explain the decision. These are visible to the customer in their dispute detail view.
 4. If selecting **Under Review**, you can tick **Request a call with the customer** — this adds a notice to the customer's status update email: *"A Capitec employee will call you within the next 15 minutes."*
 5. Click **Update** — the customer receives an email notification immediately.
-
-#### Dispute Detail View
-
-Click **⋮ → View Details** to see:
-- Customer information (name, email, account number).
-- The original transaction (description and amount).
-- The customer's dispute summary, plus the English translation if submitted in another language (with the detected source language shown).
-- Full status history with timestamps, employee names, and notes.
 
 ---
 
