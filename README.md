@@ -24,6 +24,7 @@ A full-stack, production-grade web application that allows Capitec Bank customer
 12. [Email Notifications](#email-notifications)
 13. [Testing](#testing)
 14. [Logging & Monitoring](#logging--monitoring)
+15. [Future Enhancements](#future-enhancements)
 
 ---
 
